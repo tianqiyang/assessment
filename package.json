@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/tianqiyang/assessment/issues"
   },
-  "homepage": "https://github.com/tianqiyang/assessment#readme"
+  "homepage": "https://github.com/tianqiyang/assessment#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.6",
+    "redux-thunk": "^2.3.0"
+  }
 }
