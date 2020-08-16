@@ -52,7 +52,7 @@ class Records extends React.Component {
 
     render() {
         return (
-            <table class="ui celled table">
+            <table className="ui celled table">
                 <thead>
                     <tr>
                     <th className="text-center"> Cost name </th>

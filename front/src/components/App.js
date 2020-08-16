@@ -1,27 +1,20 @@
 import React from 'react';
 import Header from './Header';
-import { connect } from 'react-redux';
-import Records from './Records';
+import RecordsTable from './RecordsTable';
+import AddRecord from './AddRecord';
 
 class App extends React.Component {
-  componentDidMount() {
-    this.props.fetchStreams();
-  }
-
   render() {
     return (
       <div className="ui container">
         <Header />
+        <RecordsTable/>
         {/* <Records/> */}
+        <AddRecord />
       </div>
     );
   }
 }
-const mapStateToProps = (state) => {
-  return { 
-      currentUserId: state.auth.userId,
-      isSignedIn: state.auth.isSignedIn
-  };
-}
 
-export default connect(mapStateToProps, {  })(App);
+
+export default App;
