@@ -5,7 +5,9 @@ import RecordForm from './RecordForm';
 
 class AddRecord extends React.Component {
     onSubmit = formValues => {
-        this.props.createRecord(formValues);
+        if (this.props.userId !== null) {
+            this.props.createRecord(formValues);
+        }
     }
     
     render() {
@@ -17,7 +19,11 @@ class AddRecord extends React.Component {
     }
 };
 
+const mapStateToProps = state => ({
+    userId: state.auth.userId
+});
+
 export default connect(
-    null,
+    mapStateToProps,
     { createRecord }
 )(AddRecord);

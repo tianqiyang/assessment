@@ -58,7 +58,7 @@ class RecordForm extends React.Component {
                     component={this.renderInput} 
                     label="Enter quantity"
                 />
-                <button className="ui button primary">Submit</button>
+                <button className="ui button primary">Add</button>
             </form>
         )
     }

@@ -26,8 +26,9 @@ export const createRecord = (formValues) => async (dispatch, getState) => {
     dispatch({ type: CREATE_RECORD, payload: response.data});
 };
 
-export const fetchRecords = () => async dispatch => {
+export const fetchRecords = () => async (dispatch) => {
     const response = await records.get('/records');
+    const filted = response.data;
 
-    dispatch({ type: FETCH_RECORDS, payload: response.data});
+    dispatch({ type: FETCH_RECORDS, payload: filted});
 };
